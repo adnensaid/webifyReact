@@ -1,0 +1,35 @@
+.banner{
+  position: relative;
+  .bannerContent{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .bannerText{
+      h1{
+        font-weight: 600;
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        color: var(--text-primary);
+        font-family: var(--vietnam-SemiBold);
+        line-height: 3.4rem;    
+      }    
+    }
+    .bannerImg{
+      background: url(../../../../assets/images/bg-1.png) no-repeat;
+      height: 100%;
+    }
+
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    right: 0;
+    background: url(../../../../assets/images/bg-1.png) no-repeat;
+    background-size: cover;
+    background-position: 0rem -30rem;
+
+  }
+}

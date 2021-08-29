@@ -1,0 +1,32 @@
+/* bases */
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body{
+  color: var(--text);
+  //font-family: var(--vietnam-Medium);
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 1rem 0 1rem 0;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+p{
+  margin: 1rem 0;
+}

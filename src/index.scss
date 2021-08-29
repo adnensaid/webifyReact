@@ -1,0 +1,15 @@
+@import './assets/styles/reset';
+@import './assets/styles/variables';
+@import './assets/styles/base';
+@import './assets/styles/classes';
+@import './assets/styles/utils';
+@import './assets/styles/media-queries';
+
+
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+

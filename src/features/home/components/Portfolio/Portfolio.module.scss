@@ -1,0 +1,110 @@
+.portfolio{
+  margin: 3rem 0;
+  .portfolioContent{
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    .portfolioMenu{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      background: var(--gray-light);
+      margin: 1rem 0 3rem 0;
+      border: 0.1rem solid var(--gray-light);
+      border-radius: 0.5rem;
+      li{
+        padding: 2rem 4rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+          font-size: 2.4rem;
+          line-height: 2.2rem;
+          color: var(--blue);
+          font-weight: 500;
+          font-family: var(--vietnam-Medium);
+        }
+        &:hover{
+          transition: all 0.2s;
+          background: var(--blue);
+          a{
+            color: var(--white);
+          }
+        }
+        &:first-child{
+          background: var(--blue);
+          border-top-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+          a{
+            color: var(--white);
+          }
+        }
+        &:last-child{
+          border-top-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+        }
+      }  
+    }
+    .portfolioLatest{
+      display: grid;
+      grid-template-columns: 1fr 30rem;
+      grid-auto-rows: auto;
+      gap: 2rem;
+      .portfolioLatestElem{
+        &:nth-child(1){
+          grid-column: 1 / 2;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 4rem;
+          .portfolioLatestElemImg{
+            height: 140vh;
+            &:nth-child(1){
+              background: url(../../../../assets/images/MSARCHITECTURE.jpg) no-repeat;
+              background-size: cover;
+            }
+            &:nth-child(2){
+              background: url(../../../../assets/images/fotowork.jpg) no-repeat;
+              background-size: cover;
+            }  
+          }
+        }
+        &:nth-child(2){
+          grid-column: 1 / 2;
+          min-height: 50rem;
+          //background: red;
+          display: flex;
+          flex-direction: column;
+          .portfolioLatestElemImg{
+            flex: 1;
+            background:url(../../../../assets/images/spotyhome.jpg) no-repeat;
+            background-size: cover;
+          }  
+        }
+        &:nth-child(3){
+          grid-column: 2 / 3;
+          grid-row: 1 / span 2;
+          display: flex;
+          flex-direction: column;
+          .portfolioLatestElemImg{
+            flex: 1;
+            &:nth-child(1){
+              background: center center / cover url(../../../../assets/images/w.jpg) no-repeat;
+              margin-bottom: 2rem;
+            }
+            &:nth-child(2){
+              background: center center / cover url(../../../../assets/images/fotoworkpage.jpg) no-repeat;
+            }
+          }
+        }
+        .portfolioLatestElemImg{
+          cursor: pointer;
+          &:hover{
+            transition: all 0.3s;
+            transform: scale(1.02);
+          }
+        }
+      }  
+    }
+  }
+}

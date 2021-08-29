@@ -1,0 +1,77 @@
+/* classes */
+.container{
+  max-width: 120rem;
+  margin: auto;
+}
+.paragraphe{
+  font-family: var(--Robot-Regular);
+  font-size: 2.4rem;
+  color: var(--blue-secondary);
+  line-height: 3rem;  
+  max-width: 43.5rem;
+}
+.text-expertise{
+  color: var(--text-secondary);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.text-portfolio{
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.btn{
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  font-size: 2.2rem;
+  text-align: center;
+  text-decoration: none;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  font-family: var(--Robot-Regular);
+  &-primary{
+    color: var(--white);
+    border: 0.1rem solid var(--orange);
+    background: var(--orange);
+    max-width: 30rem;
+  }
+
+}
+.underline{
+  width: 25.8rem;
+  height: 0.3rem;
+  background: var(--orange);
+  margin: 3rem 0;
+}
+.titre{
+  color: var(--gray);
+  font-size: 7.2rem;
+  text-align: center;
+  font-family: var(--vietnam-ExtraBold);
+}
+.titre-newsletter{
+  color: var(--white);
+  font-weight: 800;
+  font-size: 5.8rem;
+  text-align: center;
+}
+.titre-secondary, .titreSecondary{
+  font-size: 3.6rem;
+  font-family: var(--Bahnschrift);
+  line-height: 2.4rem;
+  margin: 0;
+  margin: 2rem 0; 
+  font-weight: 100;
+  color: var(--blue-secondary);
+}
+.text-center{
+  text-align: center;
+}
+
+.active{
+  background: var(--orange);
+  border-radius: 0.5rem;
+  color: var(--white) !important;
+}
