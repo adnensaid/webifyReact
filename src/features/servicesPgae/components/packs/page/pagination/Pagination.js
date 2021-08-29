@@ -15,7 +15,7 @@ export default class Pagination extends Component{
       <>
       <LienBefore length = { this.props.length } updateSelectedPage = { ()=>this.props.updateSelectedPage(this.props.currentPage - 1 ) } />
       <button type="submit">
-        <img src={ submitNext } />
+        <img src={ submitNext } alt="img" />
       </button>
       </>
     }else{

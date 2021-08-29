@@ -4,9 +4,7 @@ import Pagination from './pagination/Pagination';
 
 import Style from './page.module.scss';
 export default class Page extends Component{
-  constructor(props){
-    super(props);
-  }
+
   render(){
     return(
       <>

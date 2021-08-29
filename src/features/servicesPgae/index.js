@@ -1,6 +1,6 @@
 import React from 'react';
 import { Packs, Footer } from './components';
-export default () =>{
+const index =  () =>{
   return(
     <div style={{ minHeight:'100vh', display:'flex', flexDirection:'column'}}>
       <Packs />
@@ -8,3 +8,4 @@ export default () =>{
     </div>
   )
 }
+export default index;

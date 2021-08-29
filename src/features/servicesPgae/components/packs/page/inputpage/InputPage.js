@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Pagination from '../pagination/Pagination';
 export default class InputPage extends Component{
   render(){
     return(

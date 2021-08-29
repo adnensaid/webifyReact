@@ -5,11 +5,11 @@ export default class Footer extends Component{
     return(
       <footer className={ Style.footer }>
         <ul>
-          <li><a href="#">ACCEUIL</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">PORTFOLIO</a></li>
-          <li><a href="#">TÉMOIGNAGES</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><span>ACCEUIL</span></li>
+          <li><span>SERVICES</span></li>
+          <li><span>PORTFOLIO</span></li>
+          <li><span>TÉMOIGNAGES</span></li>
+          <li><span>CONTACT</span></li>
         </ul>
         <p>© TOUS DROIT RÉSERVÉS</p>  
       </footer>

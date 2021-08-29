@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Header } from './components';
 import  Home  from './features/home';
 import Services from './features/servicesPgae';
-import { BrowserRouter as Router, Route ,NavLink, Redirect, Switch, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch, withRouter } from 'react-router-dom';
 
 
 const HeaderWithRouter = withRouter(Header);

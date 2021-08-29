@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../../assets/images/logo.png';
 import Style from './Header.module.scss';
-import { Form } from 'formik';
 import { NavLink } from 'react-router-dom';
 export default class Header extends Component{
 

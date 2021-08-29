@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Formik } from 'formik'
-import Page  from './page/Page';
 import Style from './Packs.module.scss';
 import packImg from '../../../../assets/images/vitrine.png';
 
@@ -101,6 +100,7 @@ export default class Packs extends Component{
                             p.list.length >= 4 ? (
                               p.list.map(l=>(
                                 <input
+                                key={index+l}
                                 type="button"
                                 name="typeSite"
                                 value={l}
@@ -122,6 +122,8 @@ export default class Packs extends Component{
                                 }}
                                 onChange = { this.props.handleChange }
                                 onBlur = { this.props.handleBlur }
+                                key={index+l}
+
                                 />  
                               )) 
                             )

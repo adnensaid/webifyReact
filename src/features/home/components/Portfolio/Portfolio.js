@@ -9,11 +9,11 @@ export default class Portfolio extends Component{
           <div className={ Style.portfolioContent }>
             <p className="titreSecondary text-center">NOS DERNIERS RÉALISATIONS</p>
             <ul className={Style.portfolioMenu}>
-              <li> <a href="#" className={Style.textPortfolio}>TOUS</a> </li>
-              <li> <a href="#" className={Style.textPortfolio}>DESIGN WEB</a> </li>
-              <li> <a href="#" className={Style.textPortfolio}>LOGOS</a> </li>
-              <li> <a href="#" className={Style.textPortfolio}>GRAPHIQUE</a> </li>
-              <li> <a href="#" className={Style.textPortfolio}>APPLICATIONS MOBILES</a> </li>
+              <li> <span className={Style.textPortfolio}>TOUS</span></li>
+              <li> <span className={Style.textPortfolio}>DESIGN WEB</span></li>
+              <li> <span className={Style.textPortfolio}>LOGOS</span></li>
+              <li> <span className={Style.textPortfolio}>GRAPHIQUE</span></li>
+              <li> <span className={Style.textPortfolio}>APPLICATIONS MOBILES</span></li>
             </ul>
             <div className={ Style.portfolioLatest }>
               <div className={ Style.portfolioLatestElem }>

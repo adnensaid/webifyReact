@@ -10,7 +10,7 @@ export default class LienBefore extends Component{
   render(){
     return(
       <div href="" onClick={this.selectPage} className={ Style.lienBefore }>
-        <img src={ submitBefore } />
+        <img src={ submitBefore } alt="img" />
       </div>
     )
   }

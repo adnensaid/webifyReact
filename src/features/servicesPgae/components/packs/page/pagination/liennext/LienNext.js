@@ -10,7 +10,7 @@ export default class LienNext extends Component{
   render(){
     return(
       <div onClick={this.selectPage} className={ Style.lienNext }>
-        <img src={ submitNext } />
+        <img src={ submitNext } alt="img" />
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Banner, Expertises, ServicesPacks, Portfolio, Avis, Newsletter, Footer } from './components';
 
-export default () =>{
+const index  = () =>{
   return(
     <>
     <Banner />
@@ -15,3 +15,4 @@ export default () =>{
     </>
   )
 }
+export default index;
