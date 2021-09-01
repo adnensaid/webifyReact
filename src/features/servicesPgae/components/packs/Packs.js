@@ -73,23 +73,6 @@ export default class Packs extends Component{
     console.log(values);
   }
   render(){
-    const arrowStyles = {
-      position: 'absolute',
-      zIndex: 2,
-      top: 'calc(100% - 30px)',
-      width: 30,
-      height: 30,
-      cursor: 'pointer'
-  };
-
-  const indicatorStyles = {
-      background: 'red',
-      width: 8,
-      height: 8,
-      display: 'inline-block',
-      margin: '0 8px',
-      display:'none'
-  };
     return(
       <div className={ Style.packs }>
         <div className="container">
@@ -109,9 +92,11 @@ export default class Packs extends Component{
                   <form onSubmit = { handleSubmit } className={ Style.form }>
 
                     <Carousel
+                       transitionTime = "500"
                        statusFormatter={(current, total) => `Current slide: ${current} / Total: ${total}`}
-                       onChange = { (current, item) =>{
-                         console.log(current);
+                       showThumbs={ false }
+                      
+                       onChange = { (current) =>{
                          if (current > 0) {
                           this.setState({
                             arrowStyles:{
@@ -136,7 +121,6 @@ export default class Packs extends Component{
                           })      
                          }
                        } }
-
                        renderArrowPrev={(onClickHandler, hasPrev, label) =>
                            hasPrev && (
                             <button type="button" onClick={onClickHandler} title={label}  style={{ ...this.state.arrowStyles, left: 15 }}>
@@ -158,28 +142,7 @@ export default class Packs extends Component{
                            ) 
                           }  
                           renderIndicator={(onClickHandler, isSelected, index, label) => {
-                            if (isSelected) {
-                                return (
-                                    <li
-                                        style={{ ...indicatorStyles, background: '#000' }}
-                                        aria-label={`Selected: ${label} ${index + 1}`}
-                                        title={`Selected: ${label} ${index + 1}`}
-                                    />
-                                );
-                            }
-                            return (
-                                <li
-                                    style={indicatorStyles}
-                                    onClick={onClickHandler}
-                                    onKeyDown={onClickHandler}
-                                    value={index}
-                                    key={index}
-                                    role="button"
-                                    tabIndex={0}
-                                    title={`${label} ${index + 1}`}
-                                    aria-label={`${label} ${index + 1}`}
-                                />
-                            );
+                            return null
                         }}                  
                     >
                     { this.state.pages.map((p, index)=>(
@@ -249,295 +212,3 @@ export default class Packs extends Component{
     )
   }
 }
-
-
-
-{/*
-  <div className={ Style.pack }>
-    <img src={ packImg } alt="vitrine" className={ Style.packImg } />
-    <div className={ Style.packText }>
-      <h1>PACK VITRINE</h1>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.   
-      </p>
-    </div>    
-    <div className={ Style.packService }>
-      <div className={ Style.containerL }>
-        <label><span className="boule">{ this.state.currentPage + 1 }</span><p>{this.state.pages[0].title}</p></label>                 
-        <input
-         type="button"
-         name="typeSite"
-         value={this.state.pages[0].list[0]}
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />
-        <input
-         type="button"
-         name="typeSite"
-         value={this.state.pages[0].list[1]}
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />         
-        <input
-         type="button"
-         name="typeSite"
-         value={this.state.pages[0].list[2]}
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />  
-        <input
-         type="button"
-         name="typeSite"
-         value={this.state.pages[0].list[3]}
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />     
-       </div>  
-    </div>  
-      div>
-
-      iv className={ Style.pack }>
-    <div className={ Style.packService }>
-      <div className={ Style.containerL }>
-        <h2>PACK VITRINE</h2>
-        <label><span className="boule">2</span><p>{this.state.pages[1].title}</p></label>                 
-        <input
-         type="button"
-         name="typeSite"
-         value={this.state.pages[1].list[0]}
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[1].list[1] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />         
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[1].list[2] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />      
-       </div>  
-    </div>  
-      div>
-      iv className={ Style.pack }>
-    <div className={ Style.packService }>
-      <div className={ Style.containerL }>
-        <h2>PACK VITRINE</h2>
-        <label><span className="boule">3</span><p>{this.state.pages[2].title}</p></label>                 
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[2].list[0] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[2].list[1] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />             
-       </div>  
-    </div>  
-      div>  
-
-      iv className={ Style.pack }>
-    <div className={ Style.packService }>
-      <div className={ Style.containerL }>
-        <h2>PACK VITRINE</h2>
-        <label><span className="boule">4</span><p>{this.state.pages[3].title}</p></label>                 
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[3].list[0] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[3].list[1] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />         
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[3].list[2] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />      
-       </div>  
-    </div>  
-      div>  
-
-      iv className={ Style.pack }>
-    <div className={ Style.packService }>
-      <div className={ Style.containerL }>
-        <h2>PACK VITRINE</h2>
-        <label><span className="boule">5</span><p>{this.state.pages[4].title}</p></label>                 
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[4].list[0] }
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[4].list[1] }
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />         
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[4].list[2] }
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />     
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[4].list[3] }
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />   
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[4].list[4] }
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />   
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[4].list[5] }
-         style={{
-           gridColumn:"span 1"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />                 
-       </div>  
-    </div>  
-      div>  
-      iv className={ Style.pack }>
-    <div className={ Style.packService }>
-      <div className={ Style.containerL }>
-        <h2>PACK VITRINE</h2>
-        <label><span className="boule">6</span><p>{this.state.pages[5].title}</p></label>                 
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[5].list[0] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[5].list[1] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />         
-        <input
-         type="button"
-         name="typeSite"
-         value={ this.state.pages[5].list[2] }
-         style={{
-           gridColumn:"span 2"
-         }}
-         onChange = { this.props.handleChange }
-         onBlur = { this.props.handleBlur }
-         placeholder = { this.props.p }
-         />                      
-       </div>  
-    </div>  
-      div>   */}
