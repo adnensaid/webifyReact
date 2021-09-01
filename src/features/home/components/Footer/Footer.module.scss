@@ -11,10 +11,11 @@
     flex-flow: row nowrap;
     li{
       padding: 2rem;
-      a{
+      span{
         font-size: 1.6rem;
         font-weight: 800;
         color: var(--blue);
+        cursor: pointer;
       }
     }
   }
