@@ -1,15 +1,45 @@
+@import '../../../../assets/styles/media-queries';
 .services{
-  margin: 3rem 0;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
   .servicesElem{
     margin: 7rem 0;
+    @include sm{
+      margin: 2rem 0;
+    }
+    @include xs{
+      margin: 2rem 0;
+    }
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     align-items: center;
-    gap: 10rem;
+    column-gap: 8rem;
+    //row-gap: 7rem;
+    @include sm{
+      grid-template-columns: auto;
+      row-gap: 2rem;
+      justify-items: center;
+    }
+    @include xs{
+      grid-template-columns: auto;
+      row-gap: 2rem;
+    }
     .servicesText{
-      display: flex;
-      flex-direction: column;
+      @include sm{
+        align-items: center;
+        text-align: center;
+        grid-row: 2 / 3;
+        p{
+          text-align: center;
+        }
+      }
+      @include xs{
+        align-items: center;
+        text-align: center;
+        grid-row: 2 / 3;
+      }
     }
   }
 }

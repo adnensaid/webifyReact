@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Header } from './components';
 import  Home  from './features/home';
 import Services from './features/servicesPgae';
+import Contact from './features/contact';
+import Portfolio from './features/portfolio';
 import { BrowserRouter as Router, Route, Redirect, Switch, withRouter } from 'react-router-dom';
-
 
 const HeaderWithRouter = withRouter(Header);
 class App extends Component {
@@ -36,6 +37,8 @@ class App extends Component {
           <Switch>
             <Route path="/services" component={ Services }/>
             <Route path="/home"  component={ Home } />
+            <Route path="/contact"  component={ Contact } />
+            <Route path="/portfolio"  component={ Portfolio } />
             <Redirect to="/home" />
           </Switch>
         </div>    

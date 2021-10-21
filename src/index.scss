@@ -5,11 +5,20 @@
 @import './assets/styles/utils';
 @import './assets/styles/media-queries';
 
-
+/*  fonts */
+@import './assets/fonts/bevietnam/stylesheet.css';
+@import './assets/fonts/opensans/stylesheet.css';
+@import './assets/fonts/roboto/stylesheet.css';
+@import './assets/fonts/Bahnschrift/stylesheet.css';
+@import './assets/fonts/myriad/stylesheet.css';
+@import "./custom.scss";
 .App{
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  .page{
+    margin-top: 14rem;
+  }
 }
 

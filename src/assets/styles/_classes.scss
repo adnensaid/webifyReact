@@ -1,14 +1,37 @@
+@import '../../assets/styles/media-queries';
+
+.bg-red{
+  background: red;
+}
+
+
+
 /* classes */
 .container{
-  max-width: 120rem;
-  margin: auto;
+  max-width: 1158px !important;
+  margin: 0 auto;
 }
 .paragraphe{
-  font-family: var(--Robot-Regular);
-  font-size: 2.4rem;
+  font-family: 'robotoregular';
   color: var(--blue-secondary);
-  line-height: 3rem;  
-  max-width: 43.5rem;
+  &-primary{
+    font-size: 2.4rem;
+    line-height: 3.6rem;  
+    max-width: 43.5rem;
+  }
+  &-secondary{
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 3rem;
+      height: 2.6rem;
+      background: url(../images/quote1.png);
+      margin-right: 1rem;
+    }
+  }
+
 }
 .text-expertise{
   color: var(--text-secondary);
@@ -18,24 +41,25 @@
 .text-portfolio{
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
 }
-.btn{
-  display: inline-block;
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  margin: 2rem 0;
-  font-size: 2.2rem;
-  text-align: center;
-  text-decoration: none;
+button.btn{
+  border-radius: 1rem;
+  padding: .9rem 4.4rem;
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  line-height: 4rem;
   border: 0.1rem solid transparent;
+  font-family: 'be_vietnammedium';
   cursor: pointer;
-  font-family: var(--Robot-Regular);
-  &-primary{
-    color: var(--white);
-    border: 0.1rem solid var(--orange);
+  box-shadow: none;
+  color: var(--white);
+  background: var(--orange);
+  max-width: 30rem;
+  &:hover, &:focus{
     background: var(--orange);
-    max-width: 30rem;
+    border: .1rem solid var(--orange);
+    color: var(--white);
   }
 
 }
@@ -46,10 +70,17 @@
   margin: 3rem 0;
 }
 .titre{
-  color: var(--gray);
+  color: var(--gray-title);
   font-size: 7.2rem;
   text-align: center;
-  font-family: var(--vietnam-ExtraBold);
+  font-family: 'be_vietnamextrabold';
+
+  @include sm{
+    font-size: 6rem;
+  }
+  @include xs{
+    font-size: 3.6rem;
+  }
 }
 .titre-newsletter{
   color: var(--white);
@@ -57,13 +88,13 @@
   font-size: 5.8rem;
   text-align: center;
 }
-.titre-secondary, .titreSecondary{
+.titre-secondary{
   font-size: 3.6rem;
-  font-family: var(--Bahnschrift);
-  line-height: 2.4rem;
+  font-family:'bahnschrift';
+  line-height: 3.6rem;
+  font-weight: 100;
   margin: 0;
   margin: 2rem 0; 
-  font-weight: 100;
   color: var(--blue-secondary);
 }
 .text-center{
@@ -72,6 +103,7 @@
 
 .active{
   background: var(--orange);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   color: var(--white) !important;
 }
+

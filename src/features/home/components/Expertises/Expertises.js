@@ -12,28 +12,28 @@ export default class Expertises extends Component{
         <p className="titre">NOS EXPERTISES</p>
         <div className="container">
           <div className={ Style.expertisesContent }>
-            <div className={Style.expertiseElem}>
+            <div className={Style.expertiseElem+" shadow"}>
               <img src={ icon3 } alt="icon" />
               <p className={Style.textExpertise}>RESPONSIVE DESIGN</p>
             </div>
-            <div className={Style.expertiseElem}>
+            <div className={Style.expertiseElem+" shadow"}>
               <img src={ icon4 } alt="icon" />
               <p className={Style.textExpertise}>CONSEILS</p>
             </div>
-            <div className={Style.expertiseElem}>
+            <div className={Style.expertiseElem+" shadow"}>
               <img src={ icon5 } alt="icon" />
               <p className={Style.textExpertise}>CMS</p>
             </div>    
-            <div className={Style.expertiseElem}>
+            <div className={Style.expertiseElem+" shadow"}>
               <img src={ icon6 } alt="icon" />
               <p className={Style.textExpertise}>DEVELOPPEMENT</p>
             </div> 
-            <div className={Style.expertiseElem}>
+            <div className={Style.expertiseElem+" shadow"}>
               <img src={ icon7 } alt="icon" />
               <p className={Style.textExpertise}>WEB DESIGN</p>
             </div>  
             <p className={Style.details}>
-              <button href="#" className="btn btn-primary">Voir tous</button>
+              <button href="#" className="btn text-nowrap shadow-none">Voir tous !</button>
             </p>            
           </div>
         </div>

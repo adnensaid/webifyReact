@@ -1,55 +1,14 @@
-/* Variables */
 
-@font-face {
-  font-family: 'Jomhuria', cursive;
-  src: local('Jomhuria') url(../fonts/Jomhuria/Jomhuria-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Be Vietnam SemiBold';
-  src: local('Be Vietnam SemiBold') url(../fonts/be-vietnam/BeVietnam-SemiBold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Be Vietnam ExtraBold';
-  src: local('Be Vietnam ExtraBold') url(../fonts/be-vietnam/BeVietnam-ExtraBold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Be Vietnam Medium';
-  src: local('Be Vietnam Medium') url(../fonts/be-vietnam/BeVietnam-Medium.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Bahnschrift';
-  src: local('Bahnschrift') url(../fonts/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF) format('truetype');
-}
-
-@font-face {
-  font-family: 'Robot Regular', sans-serif;
-  src: local('Robot Regular') url(../fonts/Roboto/Roboto-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Robot Medium';
-  src: local('Robot Regular') url(../fonts/Roboto/Roboto-Medium.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Open Sans', sans-serif;
-  src: local('Open Sans') url(../fonts/OpenSans/OpenSans-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans SemiBold', sans-serif;
-  src: local('Open Sans SemiBold') url(../fonts/OpenSans/OpenSans-SemiBold.ttf) format('truetype');
-}
 :root{
   --text-primary:#01204d;
   --text-secondary:#046ccd;
   --orange:#f9aa00;
-  --gray:#dbdada;
-  --gray-light:#f6f6f6;
+  --gray: #f6f6f6;
+  --gray-light:#f3f3f4;
+  --gray-title: #dbdada;
   --white:#ffffff;
   --blue:#046ccd;
+  --socials:#0785cc;
   --blue-secondary:#0b2750;
   --text:#000;
   --vietnam-ExtraBold: 'Be Vietnam ExtraBold', sans-serif;
@@ -63,3 +22,4 @@
   --shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
 
 }
+

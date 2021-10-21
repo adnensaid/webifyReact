@@ -6,17 +6,20 @@
     .pack{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      column-gap: 4rem;
       align-items: center;
         .packText{
           h1{
             color: var(--blue-secondary);
             font-size: 7.2rem;
             font-family: var(--vietnam-ExtraBold);
+            text-align: start;
           }
           p{
             font-size: 2.4rem;
             font-family: var(--Robot-Regular);
             line-height: 3rem;
+            text-align: start;
           }
         }    
         .packService{

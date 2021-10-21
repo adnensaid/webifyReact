@@ -7,17 +7,23 @@ export default class footer extends Component{
   render(){
     return(
       <div className={ Style.footer }>
-        <div className="container">
+        <div className="container-xl border-top">
           <div className={ Style.footerContent }>
             <div className={ Style.socials }>
-              <img src={ facebook } alt="fcb" />
-              <img src={ linkedin } alt="lin" />
-              <img src={ instagram } alt="ins" />
+              <div className={ Style.socialsElem }>
+                <img src={ facebook } alt="fcb" />
+              </div>
+              <div className={ Style.socialsElem }>
+                <img src={ linkedin } alt="fcb" />
+              </div>
+              <div className={ Style.socialsElem }>
+                <img src={ instagram } alt="fcb" />
+              </div>
             </div>
             <p>
               © 2021 WEBIFY TECHNOLOGY, Tous droits réservés.
             </p>
-          </div>
+          </div>    
         </div>
       </div>
     )

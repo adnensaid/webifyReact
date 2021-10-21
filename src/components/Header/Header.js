@@ -2,11 +2,36 @@ import React, { Component } from 'react';
 import logo from '../../assets/images/logo.png';
 import Style from './Header.module.scss';
 import { NavLink } from 'react-router-dom';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 export default class Header extends Component{
 
   render(){
     return(
      <>
+        <Navbar bg={ this.props.scrollTop === 0 && this.props.location.pathname === "/home" ? "transparent" : "light" } expand="lg" fixed="top" className={ Style.header+" py-5" }>
+          <Container>
+            <Navbar.Brand href="#home">
+              <img src={ logo } alt="" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse>
+              <Nav className="ms-auto">
+                <NavLink to="/home" className={ this.props.scrollTop === 0 && this.props.location.pathname === "/home" ? Style.navlink+" text-white" : Style.navlink+" text-dark" } activeClassName="text-white active">ACCEUIL</NavLink>
+                <NavLink to="/services"  className={ this.props.scrollTop === 0 && this.props.location.pathname === "/home" ? Style.navlink+" text-white" : Style.navlink+" text-dark" } activeClassName="text-white active">SERVICES</NavLink>
+                <NavLink to="/portfolio" className={ this.props.scrollTop === 0 && this.props.location.pathname === "/home" ? Style.navlink+" text-white" : Style.navlink+" text-dark" } activeClassName="text-white active" >PORTFOLIO</NavLink>
+                <NavLink to="/temoignages" className={ this.props.scrollTop === 0 && this.props.location.pathname === "/home" ? Style.navlink+" text-white" : Style.navlink+" text-dark" } activeClassName="text-white active" >TÉMOIGNAGES</NavLink>
+                <NavLink to="/contact" className={ this.props.scrollTop === 0 && this.props.location.pathname === "/home" ? Style.navlink+" text-white" : Style.navlink+" text-dark" } activeClassName="text-white active">CONTACT</NavLink>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+     </>
+    )
+  }
+}
+
+/* 
+
       { this.props.location.pathname === "/home" && this.props.scrollTop ===0 ? (
         <header className={Style.header1 }  >
           <div className="container">
@@ -67,7 +92,4 @@ export default class Header extends Component{
       </header>
       
       )}
-     </>
-    )
-  }
-}
+*/

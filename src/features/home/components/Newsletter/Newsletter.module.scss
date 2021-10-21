@@ -1,7 +1,11 @@
+@import '../../../../assets/styles/media-queries';
 .newsletter{
   background: url(../../../../assets/images/bg.png) no-repeat;
   background-size: cover;
   position: relative;
+  @include xs{
+    background-position: center 0;
+  }
   .newsletterContent{
     position: relative;
     padding: 5.5rem 0;
@@ -36,7 +40,7 @@
       color: var(--white);
       font-size: 2.9rem;
       margin:2rem 0 0 0;
-      font-family: var(--Bahnschrift);
+      font-family: 'Bahnschrift';
 
     }
     .titreNewsletter{
@@ -44,7 +48,8 @@
       font-weight: 800;
       font-size: 4.8rem;
       text-align: center;    
-      font-family: var(--vietnam-ExtraBold);
+      font-family: 'be_vietnamextrabold';
+
 
     }
     form{
@@ -61,11 +66,14 @@
         outline: 0;
         min-width: 50rem; 
         font-size: 1.6rem;
+        @include xs{
+          min-width: 25rem;
+        }
         &::placeholder{
           padding:2rem;
           margin: 0;
           letter-spacing: 0.2rem;
-          font-family: var(--Bahnschrift);
+          font-family: 'Bahnschrift';
           font-size: 1.4rem;
         }  
       }

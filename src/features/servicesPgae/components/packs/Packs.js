@@ -90,7 +90,6 @@ export default class Packs extends Component{
                     }
                   )=> (
                   <form onSubmit = { handleSubmit } className={ Style.form }>
-
                     <Carousel
                        transitionTime = "500"
                        statusFormatter={(current, total) => `Current slide: ${current} / Total: ${total}`}

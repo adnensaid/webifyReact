@@ -1,26 +1,46 @@
+@import '../../../../assets/styles/media-queries';
 .footer{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 3rem;
-  line-height: 3rem;
-  font-family: var(--vietnam-ExtraBold);
-  ul{
+  font-family: 'be_vietnamextrabold';
+  background: var(--white);
+  line-height: 3.2rem;
+  padding: 2rem 0;
+  font-size: 1.6rem;
+  @include xs{
+    font-size: 1.1rem;
+  }
+  .footerContent{
     display: flex;
     flex-flow: row nowrap;
-    li{
-      padding: 2rem;
-      span{
-        font-size: 1.6rem;
-        font-weight: 800;
-        color: var(--blue);
-        cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    @include sm{
+      display: flex;
+      flex-direction: column;
+    }
+    @include xs{
+      display: flex;
+      flex-direction: column;
+    }
+    ul{
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin: 0;
+      li{
+        padding-right:2rem;
+        @include xs{
+          padding-right: 1rem;
+        }
+        span{
+          font-weight: 800;
+          color: var(--blue);
+          cursor: pointer;
+        }
       }
     }
-  }
-  p{
-    font-size: 1.6rem;
-    color: var(--blue); 
+    p{
+      color: var(--blue); 
+      margin: 0;
+    }    
   }
 }
