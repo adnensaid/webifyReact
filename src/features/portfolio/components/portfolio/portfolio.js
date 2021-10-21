@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Style from './portfolio.module.scss';
 import mockups from '../../../../assets/images/mockups.png';
 import appvision from '../../../../assets/images/appvision.png';
-import ms from '../../../../assets/images/ms.png';
 import NavbarPortfolio from '../../../navbarportfolio/NavbarPortfolio';
 export default class Portfolio extends Component{
   constructor(props){

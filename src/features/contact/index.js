@@ -1,6 +1,6 @@
 import React from 'react';
 import { Contact, Footer } from './components';
-export default  ()=>{
+const PageContact=()=>{
   return(
     <div className="page">
       <Contact />
@@ -8,3 +8,4 @@ export default  ()=>{
     </div>
   )
 }
+export default PageContact;

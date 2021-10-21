@@ -6,11 +6,7 @@ import service3 from '../../../../assets/images/appmobile.png';
 import service4 from '../../../../assets/images/surmesure.png';
 
 export default class ServicesPacks extends Component{
-  constructor(props){
-    super(props);
-    //const [y, setY] = useState(window.scrollY);
 
-  }
   render(){
     return(
       <section className={ Style.services }>

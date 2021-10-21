@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '../../assets/images/logo.png';
 import Style from './Header.module.scss';
 import { NavLink } from 'react-router-dom';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 export default class Header extends Component{
 
   render(){

@@ -27,26 +27,26 @@ export default class Portfolio extends Component{
                 <div className="col-8">
                   <div className="row gx-5 gy-5">
                     <div className="item col-6">
-                      <img src={ img1 } className="w-100" />
-                      <img src={ img2 } className="w-100" />
-                      <img src={ img3 } className="w-100" />
-                      <img src={ img4 } className="w-100" />
-                      <img src={ img5 } className="w-100" />    
+                      <img src={ img1 } className="w-100" alt="img"/>
+                      <img src={ img2 } className="w-100" alt="img"/>
+                      <img src={ img3 } className="w-100" alt="img"/>
+                      <img src={ img4 } className="w-100" alt="img"/>
+                      <img src={ img5 } className="w-100" alt="img"/>    
                     </div>
                     <div className="item col-6 ">
-                      <img src={ img6 } className="w-100" />    
+                      <img src={ img6 } className="w-100" alt="img" />    
                     </div>
                     <div className="item">
-                    <img src={ img8 } className="w-100 mt-5" />    
+                    <img src={ img8 } className="w-100 mt-5" alt="img" />    
                     </div>
                   </div>
                 </div>
                 <div className="col-4 d-flex flex-column">
                   <div className="row item">
-                    <img src={ img9 } className="w-100 mb-5" />
+                    <img src={ img9 } className="w-100 mb-5" alt="img" />
                   </div>
                   <div className="row item">
-                    <img src={ img10 } className="w-100" />
+                    <img src={ img10 } className="w-100" alt="img" />
                   </div>
                 </div>
               </div>

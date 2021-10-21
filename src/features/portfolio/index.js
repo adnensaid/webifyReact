@@ -1,6 +1,6 @@
 import React from 'react';
 import { Portfolio, Footer } from './components';
-export default ()=>{
+const PortfolioPage = ()=>{
   return(
     <div className="page">
       <Portfolio />
@@ -8,3 +8,5 @@ export default ()=>{
     </div>
   )
 }
+
+export default PortfolioPage;

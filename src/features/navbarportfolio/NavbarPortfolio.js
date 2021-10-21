@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
 import Style from './navbarportfolio.module.scss';
 export default class NavbarPortfolio extends Component{
   constructor(props){

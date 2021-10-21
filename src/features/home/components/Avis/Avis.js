@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Style from './Avis.module.scss';
 import stella from '../../../../assets/images/stella.png';
 import stellaFade from '../../../../assets/images/stella-fade.png';
-import quote from '../../../../assets/images/quote1.png';
+//import quote from '../../../../assets/images/quote1.png';
 import quoteFade from '../../../../assets/images/quotefade.png';
 import person1 from '../../../../assets/images/person1.png';
 import person2 from '../../../../assets/images/person2.png';
